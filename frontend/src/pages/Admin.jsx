@@ -54,9 +54,6 @@ function Admin() {
   // const [ab, setAb] = useState(false);
   const [rollnumbers, setRollnumbers] = useState([]);
   const navigator = useNavigate();
-  // const [search, setSearch] = useState("");
-  // const [sdata, setSdata] = useState("");
-  // const [page, setPage] = useState(1);
   const [totalpage, setTotalpage] = useState();
 
   const navigate = useNavigate();
