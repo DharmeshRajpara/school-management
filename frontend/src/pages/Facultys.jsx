@@ -55,7 +55,7 @@ function Facultys() {
     myHeaderss.append("Content-Type", "application/json");
     myHeaderss.append(
       "Authorization",
-      `Bearer ${localStorage.getItem("facultytoken")}`,
+      `Bearer ${localStorage.getItem("faculty-token")}`,
     );
 
     const requestOptionss = {
@@ -100,6 +100,10 @@ function Facultys() {
     setstatusStudent(!statusStudent);
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
+    myHeaders.append(
+      "Authorization",
+      `Bearer ${localStorage.getItem("faculty-token")}`,
+    );
     const raw = JSON.stringify({
       date: d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear(),
       rollNumber: rollNumber,

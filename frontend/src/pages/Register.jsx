@@ -14,7 +14,7 @@ function Register() {
   );
   const [role, setRole] = useState("admin");
   const navigate = useNavigate();
-  console.log(role, 88889899999999);
+  // console.log(role, 88889899999999);
 
   // console.log(location.state, 8);
 

@@ -53,8 +53,8 @@ function Admin() {
   const [chartData, setChartData] = useState();
   // const [ab, setAb] = useState(false);
   const [rollnumbers, setRollnumbers] = useState([]);
-  const navigator = useNavigate();
-  const [totalpage, setTotalpage] = useState();
+  // const navigator = useNavigate();
+  // const [totalpage, setTotalpage] = useState();
 
   const navigate = useNavigate();
   // console.log(chartData, 877);
@@ -94,7 +94,7 @@ function Admin() {
       .then((response) => response.json())
       .then((result) => {
         setData(result);
-        setTotalpage(result?.totalPages);
+        // setTotalpage(result?.totalPages);
       })
       .catch((error) => console.error(error));
   }, []);
@@ -136,10 +136,10 @@ function Admin() {
       // }
 
       const todayRollNumbers = data?.apdata
-        .filter((item) => item.date === d1)
-        .map((item) => item.rollNumber.toString());
+        ?.filter((item) => item.date === d1)
+        ?.map((item) => item.rollNumber.toString());
 
-      setRollnumbers(todayRollNumbers);
+      setRollnumbers(todayRollNumbers); 
       // rollnumbers.push(todayRollNumbers);
 
       // });
@@ -157,7 +157,7 @@ function Admin() {
   // console.log(data?.students);
 
   function Registerfunction() {
-    navigator("/Register", {
+    navigate("/Register", {
       state: {
         lastRollnumber: data?.lastRollNumber,
       },

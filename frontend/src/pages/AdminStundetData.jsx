@@ -252,7 +252,7 @@ function AdminStundetData() {
         .filter((item) => item.date === d1)
         .map((item) => item.rollNumber.toString());
     
-      setRollnumbers(todayRollNumbers || []);
+      setRollnumbers(todayRollNumbers );
     }
   }, [data]);
 
